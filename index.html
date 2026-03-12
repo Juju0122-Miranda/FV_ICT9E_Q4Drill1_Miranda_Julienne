@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <title>Q4 Drill 1</title>
+
+<style>
+
+  
+
+
+
+    h1{
+        text-align: center;
+    }
+
+    </style>
+</head>
+<body>
+     <h1>Electricity Usage Checker</h1> 
+
+
+
+
+
+     <input type="text" id="consume" class="form-control" placeholder="type here">
+     <button class="btn-btn-info" onclick="checkconsume()">Check</button>
+     
+
+     <script>
+        function checkconsume(){ 
+            var consume = document.getElementById("consume").value;
+            var category1 = "Lifeline Consumer"; 
+            var category2 = "Low consumption";
+            var category3 = "Average Consumption";
+            var category4 = "High Consumption";
+            var category5 = "Very High Consumption";
+        
+        if(isNaN(consume)|| consume < 0 ){
+            alert("Please input a valid number");
+        }
+
+     else if (consume<= 100 ){ 
+            alert(category1 + ": Discounted electricity rate");
+        }
+
+     else if(consume<=200 ){
+            alert(category2 + "Normal residential rate");
+         }
+
+     else if(consume<=300 ){
+            alert(category3 + "Typical electricity usage");
+         }
+         
+    else if(consume<=500){
+            alert(category4 + "Higher electricity usage");
+         }
+
+     else{ 
+            alert(category5 + "Heavy electricity users");
+        }
+        }
+    </script>
+
+</body>
+</html>
